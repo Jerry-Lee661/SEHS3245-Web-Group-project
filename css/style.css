@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(86, 133, 164,0.7);
+    border: 3px dashed rgb(46, 2, 61);
+    height: 12%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    width: 80px;  /* 标志宽度 */
+    height: 100px; /* 标志高度 */
+    background: url('https://www.logosc.cn/uploads/output/2021/10/19/81ebfa1e23ac2ca8582edeefdc9016be.jpg') no-repeat center center;
+    background-size: contain;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;    /* 垂直排列 */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 95%;
+}
+
+/* links */
+.navbar  { 
+    position: relative;
+    align-items: center;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    bottom: 20%;
+}
+/* header right side */
+.information { 
+    position: relative;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: right;
+    bottom: 120%;
+}
+
+.information i{
+    margin-right: 30px;
+}
+
+h1{
+    color: rgb(27, 62, 27);
+    margin-top: 10px;
+}
+header ul{
+    position: absolute;
+    top: 0%;
+    line-height: 5px;
+    text-align: center;
+    width: 100%;
+}
+header li {
+    display: inline;
+    margin-right: 2vw;
+}
+/* not include the last one */
+header li:last-child {
+    margin-right: 0;
+}
+
+header a {
+    color: rgb(239, 234, 245);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+header a:hover {
+    color: rgb(50, 36, 72);
+}
+
+.discount{
+    background-color: rgb(238, 179, 140);
+    border: 3px; border-color: goldenrod; border-style: dashed;
+   /*text color*/
+    color: black;
+    height: 90vh;
+    background-image:linear-gradient(rgba(202, 173, 173, 0.4), rgba(255, 255, 255, 0.4)), url(https://down-tw.img.susercontent.com/file/cn-11134207-7r98o-lwn3tstlle11e4);
+    background-attachment: fixed; 
+    background-size: 100% 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.discount h5{
+    font-size: 20px;
+    margin: 0%;
+    color: #332727;
+}
+.discount a{
+    color: black;
+    text-decoration: none;
+    border: 3px solid rgb(73, 59, 54);
+    border-radius: 5cm;
+    padding: 1px 4px;
+    
+
+}
+.content  {
+    
+    background-color: rgb(198, 249, 232);
+    color: #271241;
+    height: 550px;
+    justify-content: left;
+    align-items: center;
+    font-size: medium;
+    display: flex;
+
+}
+.content img {
+    width: 50%;
+}
+.half {
+    width: 50%;
+}
+
+.half p{
+    text-align: center;
+}
+
+
+/* about hotsale page */
+.content2 {
+    background-size: cover;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(https://eehfhddnkc3.exactdn.com/wp-content/uploads/2024/02/Mallorca-cycling_Self_guided_Hero.jpg);
+    color: #271241;
+    padding: 12rem 8rem;
+    align-items: center;
+    gap: 2rem;
+}
+/* about hotsale page */
+.content2 iframe {
+    width: 70%;
+    object-fit: cover;
+}
+
+.product{
+    background-color: rgb(218, 200, 247);
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.product div{
+    width: 200px;
+    text-align: center;
+}
+
+.product img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+/* for picture moving */
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.environment {
+    background-color: rgb(238, 179, 140);
+    /*yt 11:30*/
+    border: 3px solid rgb(2, 74, 40);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(https://dm0qx8t0i9gc9.cloudfront.net/watermarks/image/rDtN98Qoishumwih/eco-friendly-background_XJrVem_SB_PM.jpg);
+    background-size: 60%;
+    /* Modified part */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* divided equally into two columns */
+    padding: 2rem;
+    
+}
+
+.environment .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.environment img{
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+} 
+
+.environment ul{
+    font-size: larger;
+    margin-top: 11%;
+    margin-left: 30%;
+}
+
+.environment a {
+    color: black;
+    text-decoration: none;
+    border: 3px solid rgb(73, 59, 54);
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.environment a:hover {
+    background-color: rgb(109, 250, 177);
+    color: white;
+}
+
+/* me */
+.contact-info{
+    text-align: center;
+    padding: 10px
+}
+
+.contact-info i{
+    color:#4caf50;
+    margin-right: 10px;
+}
+
+.more{
+    text-align: center;
+}
+
+.contact-info{
+    margin-top: -2%;
+}
+
+footer {
+    background-color: bisque;
+    border: 3px dashed goldenrod;
+    padding: 2rem;
+    text-align: center;
+}
+
+.quantity input {
+    border: none;
+    text-align: center;
+    width: 50px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+   
+.plus-btn {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+
+.minus-btn {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }

@@ -1,58 +1,69 @@
-// 初始购物车数据
-const initialCartData = [
-	{
-		name: "Apple",
-		price: 1.2,
-		quantity: 3,
-	},
-	{
-		name: "Banana",
-		price: 0.5,
-		quantity: 5,
-	},
-	{
-		name: "Orange",
-		price: 0.8,
-		quantity: 2,
-	},
+// 假设的商品数据
+const products = [
+    { id: 1, name: '商品1', price: 100 },
+    { id: 2, name: '商品2', price: 200 },
+    { id: 3, name: '商品3', price: 300 }
 ];
 
-// 从 sessionStorage 中读取购物车数据，如果没有则使用初始数据
-let cart = JSON.parse(sessionStorage.getItem("cart")) || initialCartData;
+// localStorage获取购物车数据,如果没有则初始化为空数组
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// 添加项目到购物车并更新 sessionStorage
-function addItem(item) {
-	cart.push(item);
-	sessionStorage.setItem("cart", JSON.stringify(cart));
-	renderCart();
-}
-
-// 从购物车中删除项目并更新 sessionStorage
-function removeItem(itemName) {
-	cart = cart.filter((item) => item.name !== itemName);
-	sessionStorage.setItem("cart", JSON.stringify(cart));
-	renderCart();
-}
-
-// 计算购物车中所有项目的总价
-function calculateTotal() {
-	return cart.reduce((total, item) => total + item.price, 0);
-}
-
-// 渲染购物车列表
+// 渲染购物车商品
 function renderCart() {
-	const cartList = document.getElementById("cart-list");
-	cartList.innerHTML = ""; // 清空现有列表
-	cart.forEach((item) => {
-		const listItem = document.createElement("li");
-		listItem.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
-		cartList.appendChild(listItem);
-	});
-	const total = calculateTotal();
-    const totalElement = document.getElementById("cart-total");
-    totalElement.textContent = `Total: $${total}`;
-	cartList.appendChild(totalElement);
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = ''; // 清空购物车
+
+    cart.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.price}</td>
+            <td>${item.quantity}</td>
+            <td>${item.price * item.quantity}</td>
+        `;
+        cartItems.appendChild(row);
+    });
 }
 
-// 页面加载时渲染购物车列表
-document.addEventListener("DOMContentLoaded", renderCart);
+// 添加商品到购物车
+function addItem() {
+    const randomProduct = products[Math.floor(Math.random() * products.length)];
+    const existingItem = cart.find(item => item.id === randomProduct.id);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    }
+    else {
+        cart.push({ ...randomProduct, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+}
+
+// 提交订单到服务器
+function submitOrder() {
+    fetch('YOUR_SERVER_ENDPOINT', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(cart),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert('订单提交!');
+            cart = []; // 清空购物车
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}
+
+
+document.getElementById('add-item').addEventListener('click', addItem);
+document.getElementById('submit-order').addEventListener('click', submitOrder);
+
+
+renderCart();
