@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shopping Cart</title>
+		<!-- 引入 Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<!-- 引入 jQuery 和 Bootstrap JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<!-- 引入自定义 CSS -->
+		<link rel="stylesheet" href="css/cart.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo"></div>
+			<!-- 公司图标 -->
+			<div class="company-info">
+				<h1>Company Name</h1>
+				<p>Your shopping cart</p>
+				<!-- 购物车提示 -->
+			</div>
+			<div class="button-group">
+				<a href="mainpage.html" class="button">Main page</a>
+				<!-- 主页 -->
+				<a href="newstyle.html" class="button">Newstyle</a>
+				<!-- 新款页面 -->
+				<a href="hotsale.html" class="button">Hot sale</a>
+				<!-- 热卖页面 -->
+				<a href="seasonal.html" class="button">Seasonal</a>
+				<!-- 季节性商品页面 -->
+				<a class="button" onclick="loadUser()"
+					>User<i class="bi bi-person-circle"></i
+				></a>
+				<!-- 用户按钮 -->
+			</div>
+		</header>
+
+		<div class="container">
+			<!-- 商品项示例 -->
+			<div class="cart-item">
+				<ul class="item-details" id="cart-list"></ul>
+			</div>
+			<div id="cart-end"></div>
+			<!-- 总价/清空/结算 -->
+			<div>
+				<div class="total" id="cart-total">Total: $</div>
+				<!-- 显示总金额 -->
+				<button id="clear-cart" class="clear-button" onclick="clearCart()">
+					Clear cart
+				</button>
+				<!-- 清空购物车按钮 -->
+				<button
+					id="checkout-button"
+					class="checkout-button"
+					data-toggle="modal"
+					data-target="#checkout"
+				>
+					Checkout
+				</button>
+				<!-- 结算按钮 -->
+			</div>
+			<!-- 结算弹窗 -->
+			<div
+				class="modal fade"
+				id="checkout"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle1"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="">Checkout</h3>
+						</div>
+						<div class="modal-body modal-body-content">
+							<img class="modal-body-img" src="img/QR_code.png" alt="" />
+							<!-- 结算二维码 -->
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<!-- 关闭按钮 -->
+							<button type="button" id="submit-order" class="btn btn-danger">
+								Place Order
+							</button>
+							<!-- 下单按钮 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 引入自定义 JS -->
+		<script src="js/cart.js"></script>
+		<script src="js/user.js"></script>
+	</body>
+</html>

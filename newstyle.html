@@ -1,306 +1,529 @@
 <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>cool bottle</title>
+		<!--link to css-->
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		/>
+		<link rel="stylesheet" href="css/product.css" />
+		<link rel="stylesheet" href="css/product_fix.css" />
 
+		<!--for cart, plus, minus logo-->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<!--for bootstrapcdn buttons -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<!--for Pop-up box -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="js/Web_part_2.js"></script>
+		<script src="js/product.js"></script>
+		<script src="js/user.js"></script>
+	</head>
 
-<head>
-    <style></style>
-
-    <title>cool bottle</title>
-    <!--link to css-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" /> <!--for cart, plus, minus logo-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!--for bootstrapcdn buttons -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!--for Pop-up box -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <!--for Pop-up box -->
-    <script src="Web_part_2.js"></script>
-
-
-</head>
-
-<body>
-    <header>
-        <div class="logo"></div>
-            <div class="company-info">
-				<h2>EcoVessel Co.</h2>
+	<body>
+		<header>
+			<div class="logo"></div>
+			<div class="company-info">
+				<h2>Eco Hydro Bottle</h2>
 			</div>
-        
-        <nav class="navbar">
-            <ul>
-                <li><a href="mainpage.html">Main page</a></button></li>
-                <li><a href="newstyle.html">New style</a></li>
-                <li><a href="hotsale.html">Hot sale</a></li>
-                <li><a href="#Seasonal">Seasonal</a></li>
-            </ul>
-        </nav>
-        <!-- for cart, contact -->
-        <nav class="information">
-            <a href="#Contact">Contact</a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="discount" id="newstyle.html">
-        <!-- id: jump to here after click Newstyle-->
-            <h5><b>Don't miss our exciting water bottle sale! </b></h5><br />
-            <h5><b>Hurry, the discount lasts only until the end of the month! Shop now!</b></h5><br />
-            <h5><b>Up to 30% off on a wide selection of stylish and durable water bottles</b></h5><br />
+			<nav class="navbar">
+				<ul>
+					<li><a href="mainpage.html">Main page</a></li>
+					<li><a href="newstyle.html">New style</a></li>
+					<li><a href="hotsale.html">Hot sale</a></li>
+					<li><a href="seasonal.html">Seasonal</a></li>
+				</ul>
+			</nav>
+			<!-- for cart, contact -->
+			<nav class="information">
+				<a class="button" onclick="loadUser()">User<i class="bi bi-person-circle"></i></a>
 
+				<a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+			</nav>
+		</header>
 
-            <h5><b>Perfect for staying hydrated on the go, our collection features eco-friendly options and trendy designs</b>
-            </h5> <br />
-            <b><a href="#CheckBelow">Check Below</a></b>
-        </section>
+		<main>
+			<section class="discount" id="newstyle.html">
+				<!-- id: jump to here after click Newstyle-->
+				<h5>Don't miss our exciting water bottle sale!</h5>
+				<br />
+				<h5>
+					Hurry, the discount lasts only until the end of the month! Shop now!
+				</h5>
+				<br />
+				<h5>
+					Up to 30% off on a wide selection of stylish and durable water bottles
+				</h5>
+				<br />
+				<h5>
+					Perfect for staying hydrated on the go, our collection features
+					eco-friendly options and trendy designs
+				</h5>
+				<br />
+				<a href="#CheckBelow">Check Below</a>
+			</section>
 
-        <section class="content">
-            <img src="https://shop.wemughk.com/cdn/shop/collections/Emoji_Laugh_1-1_1200x1200.jpg?v=1669791124"
-                alt="ourshop" height="100%">
+			<section class="content">
+				<div class="img-container">
+					<img
+						src="https://shop.wemughk.com/cdn/shop/collections/Emoji_Laugh_1-1_1200x1200.jpg?v=1669791124"
+						alt="ourshop"
+					/>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/628d90da7dedc0000fb4085b/720x.webp?source_format=jpg"
+						alt=""
+					/>
+					<div class="imgtext">
+						<div class="imgcontent">
+							<p style="font-size: 3rem">
+								Stainless steel thermos <br /><br />
+								Vacuum heat preservation for <b>12 hours</b><br />
+								Ice preservation time up to <b>32 hours</b><br />
+								Non-reactive, won't impart flavors <br />Does not contain
+								<i>BPA/BPS/BPF</i> hormone
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- id: jump to here after click CheckBelow-->
+			<section class="product" id="CheckBelow">
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66f12ba1aa6fae0012378f10/800x.webp?source_format=jpg"
+						alt=""
+					/>
+					<h4>AquaGuard</h4>
+					<h4>HKD$50</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product1"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product1-->
+				</div>
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66ac8dfa36b05e00108e4433/800x.webp?source_format=jpg"
+						alt=""
+					/>
+					<h4>PureFlow</h4>
+					<h4>HKD$50</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product2"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product2-->
+				</div>
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62c67888dc154d002f1bd8e9/800x.webp?source_format=jpg"
+						alt=""
+					/>
+					<h4>SipSaver</h4>
+					<h4>HKD$50</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product3"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product3-->
+				</div>
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65276430e732da002015c39f/800x.webp?source_format=jpg"
+						alt=""
+					/>
+					<h4>EcoHydrate</h4>
+					<h4>HKD$50</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product4"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product4-->
+				</div>
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66da69f8fc764c001f40faf8/800x.webp?source_format=jpg"
+						alt=""
+					/>
+					<h4>HydroMate</h4>
+					<h4>HKD$50</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product5"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product5-->
+				</div>
+			</section>
 
-            <div class="half">
-                <p style="font-size: 32px;">Stainless steel thermos <br /><br/>
-                    Vacuum heat preservation for 12 hours<br/> Ice preservation time up to 32 hours <br/>
-                    Vacuum bottle body does not atomize <br/>Does not contain BPA/BPS/BPF hormone
-                    </p>
-                
-            </div>
+			<!-- Modal for prodect 1, id for detect product1 -->
+			<div
+				class="modal fade"
+				id="product1"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle1"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header"> <!-- modal的標題 -->
+							<h3 class="modal-title" id="product1">AquaGuard</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66f12ba1aa6fae0012378f10/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$50</p>
+							<p class="ProduceSize">Size: 800mL</p>
+							<p class="ProductColor">Color: Blue</p>
+							<p>
+								Features a sleek design and encourages eco-conscious living with
+								every sip
+							</p>
 
-        </section>
-<!-- id: jump to here after click CheckBelow-->
-        <section class="product" id="CheckBelow">
-            <div>
-                <img src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66f12ba1aa6fae0012378f10/800x.webp?source_format=jpg" alt="">
-                <h4>AquaGuard</h4>
-                <h4>HKD$50</h4>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#product1">Buy now</button> <!--datatarget for product1-->
-            </div>
-            <div>
-                <img src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66ac8dfa36b05e00108e4433/800x.webp?source_format=jpg"
-                    alt="">
-                <h4>PureFlow</h4>
-                <h4>HKD$50</h4>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#product2">Buy now</button> <!--datatarget for product2-->
-            </div>
-            <div>
-                <img src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62c67888dc154d002f1bd8e9/800x.webp?source_format=jpg"
-                    alt="">
-                <h4>SipSaver</h4>
-                <h4>HKD$50</h4>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#product3">Buy now</button> <!--datatarget for product3-->
-            </div>
-            <div>
-                <img src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65276430e732da002015c39f/800x.webp?source_format=jpg"
-                    alt="">
-                <h4>EcoHydrate</h4>
-                <h4>HKD$50</h4>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#product4">Buy now</button> <!--datatarget for product4-->
-            </div>
-            <div>
-                <img src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66da69f8fc764c001f40faf8/800x.webp?source_format=jpg" alt="">
-                <h4>HydroMate</h4>
-                <h4>HKD$50</h4>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#product5">Buy now</button> <!--datatarget for product5-->
-            </div>
+							<div class="quantity">
+								Quantity:
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
+			<!-- Modal for prodect 2, id for detect product2 -->
+			<div
+				class="modal fade"
+				id="product2"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle2"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product2">PureFlow</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66ac8dfa36b05e00108e4433/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$50</p>
+							<p class="ProduceSize">Size: 800mL</p>
+							<p class="ProductColor">Color: Pale Mauve</p>
+							<p>Made from eco-friendly materials</p>
+							<div class="quantity">
+								Quantity:
 
-        </section>
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <!-- Modal for prodect 1, id for detect product1 -->
-        <div class="modal fade" id="product1" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="product1">AquaGuard</h3>
-                        </button>
-                    </div>
-                    <div class="modal-body" style="font-size: 20px;">
-                        <img style="width: 100%; height: 10%;"
-                            src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66f12ba1aa6fae0012378f10/800x.webp?source_format=jpg" alt="">
-                        <p>Price: HKD$50</p>
-                        <p>Size: 800mL</p>
-                        <p>Color: Blue</p>
-                        <p>Features a sleek design and encourages eco-conscious living with every sip</p>
-                        Quantity: 
-                        <div class="quantity">
-                            <button class="plus-btn" type="button" name="button">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            <input style="font-size: 23px;" type="text" name="name"  value="1" disabled> <!--disable input-->
-                            <button class="minus-btn" type="button" name="button">
-                                <i class="fas fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<!-- Modal for prodect 3, id for detect product3 -->
+			<div
+				class="modal fade"
+				id="product3"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle3"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product3">SipSaver</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62c67888dc154d002f1bd8e9/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$50</p>
+							<p class="ProduceSize">Size: 800mL</p>
+							<p class="ProductColor">Color: Pale Mauve</p>
+							<p>An ergonomic bottle with a leak-proof design</p>
+							<div class="quantity">
+								Quantity:
 
-        <!-- Modal for prodect 2, id for detect product2 -->
-        <div class="modal fade" id="product2" tabindex="-1" role="dialog" 
-            aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="product2">PureFlow</h3>
-                        </button>
-                    </div>
-                    <div class="modal-body" style="font-size: 20px;">
-                        <img style="width: 100%; height: 10%;"
-                            src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66ac8dfa36b05e00108e4433/800x.webp?source_format=jpg"
-                            alt="">
-                        <p>Price: HKD$50</p>
-                        <p>Size: 800mL</p>
-                        <p>Color: Pale Mauve</p>
-                        <p>Made from eco-friendly materials</p>
-                        Quantity: 
-                        <div class="quantity">
-                            <button class="plus-btn" type="button" name="button">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            <input style="font-size: 23px;" type="text" name="name"  value="1" disabled> <!--disable input-->
-                            <button class="minus-btn" type="button" name="button">
-                                <i class="fas fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-        <!-- Modal for prodect 3, id for detect product3 -->
-        <div class="modal fade" id="product3" tabindex="-1" role="dialog" 
-            aria-labelledby="exampleModalCenterTitle3" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="product3">SipSaver</h3>
-                    </div>
-                    <div class="modal-body" style="font-size: 20px;">
-                        <img style="width: 100%; height: 10%;"
-                            src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62c67888dc154d002f1bd8e9/800x.webp?source_format=jpg" alt="">
-                        <p>Price: HKD$50</p>
-                        <p>Size: 800mL</p>
-                        <p>Color: Pale Mauve</p>
-                        <p>An ergonomic bottle with a leak-proof design</p>
-                        Quantity: 
-                        <div class="quantity">
-                            <button class="plus-btn" type="button" name="button">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            <input style="font-size: 23px;" type="text" name="name"  value="1" disabled> <!--disable input-->
-                            <button class="minus-btn" type="button" name="button">
-                                <i class="fas fa-minus"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<!-- Modal for prodect 4, id for detect product4 -->
+			<div
+				class="modal fade"
+				id="product4"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle4"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product4">EcoHydrate</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65276430e732da002015c39f/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$50</p>
+							<p class="ProduceSize">Size: 800mL</p>
+							<p class="ProductColor">Color: Red</p>
+							<p>Made from eco-friendly materials</p>
+							<div class="quantity">
+								Quantity:
 
-          <!-- Modal for prodect 4, id for detect product4 -->
-        <div class="modal fade" id="product4" tabindex="-1" role="dialog" 
-          aria-labelledby="exampleModalCenterTitle4" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h3 class="modal-title" id="product4">EcoHydrate</h3>
-                  </div>
-                  <div class="modal-body" style="font-size: 20px;">
-                      <img style="width: 100%; height: 10%;"
-                          src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65276430e732da002015c39f/800x.webp?source_format=jpg" alt="">
-                      <p>Price: HKD$50</p>
-                      <p>Size: 800mL</p>
-                      <p>Color: Red</p>
-                      <p>Made from eco-friendly materials</p>
-                      Quantity: 
-                      <div class="quantity">
-                          <button class="plus-btn" type="button" name="button">
-                              <i class="fas fa-plus"></i>
-                          </button>
-                          <input style="font-size: 23px;" type="text" name="name"  value="1" disabled> <!--disable input-->
-                          <button class="minus-btn" type="button" name="button">
-                              <i class="fas fa-minus"></i>
-                          </button>
-                      </div>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-danger">Add to cart</button>
-                  </div>
-              </div>
-          </div>
-      </div>
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <!-- Modal for prodect 5, id for detect product5 -->
-      <div class="modal fade" id="product5" tabindex="-1" role="dialog" 
-      aria-labelledby="exampleModalCenterTitle5" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h3 class="modal-title" id="product5">HydroMate</h3>
-              </div>
-              <div class="modal-body" style="font-size: 20px;">
-                  <img style="width: 100%; height: 10%;"
-                      src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66da69f8fc764c001f40faf8/800x.webp?source_format=jpg" alt="">
-                  <p>Price: HKD$50</p>
-                  <p>Size: 800mL</p>
-                  <p>Color: Orange</p>
-                  <p>A compact and travel-friendly water bottle</p>
-                  Quantity: 
-                  <div class="quantity">
-                      <button class="plus-btn" type="button" name="button">
-                          <i class="fas fa-plus"></i>
-                      </button>
-                      <input style="font-size: 23px;" type="text" name="name"  value="1" disabled> <!--disable input-->
-                      <button class="minus-btn" type="button" name="button">
-                          <i class="fas fa-minus"></i>
-                      </button>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-danger">Add to cart</button>
-              </div>
-          </div>
-      </div>
-  </div>
-        <section class="more">
-            <blockquote> "Cool bottle aims to deliver joy and celebration through exquisite, bottle tailored for
-                every occasion"</blockquote>
+			<!-- Modal for prodect 5, id for detect product5 -->
+			<div
+				class="modal fade"
+				id="product5"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle5"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product5">HydroMate</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/66da69f8fc764c001f40faf8/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$50</p>
+							<p class="ProduceSize">Size: 800mL</p>
+							<p class="ProductColor">Color: Orange</p>
+							<p>A compact and travel-friendly water bottle</p>
+							<div class="quantity">
+								Quantity:
 
-          </section>
-  <!-- contact info -->
-        <div class="contact-info" id="Contact">
-            <h2>Contact Information</h2>
-            <p style="font-size: 20px;">
-                <i class="fas fa-phone"></i>+852 1234 5678
-                <i class="fas fa-envelope"></i>EcoVesselwaterbottle@gmail.com
-            </p>
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="more">
+				<blockquote>
+					"Cool bottle aims to deliver joy and celebration through exquisite,
+					bottle tailored for every occasion"
+				</blockquote>
+			</section>
+			<!-- contact info -->
+			<div class="contact-info" id="Contact">
+				<h2>Contact Information</h2>
+				<p style="font-size: 20px">
+					<i class="fas fa-phone"></i>+852 1234 5678
+					<i class="fas fa-envelope"></i>
+					<a href="mailto:GroupProject@gmail.com">GroupProject@gmail.com</a>
+				</p>
+			</div>
+		</main>
 
-        </div>
-
-    </main>
-
-    <footer>
-        <p>Copyright 2024 <i> Sweet bottle</i> All Rights Reserved</p>
-
-    </footer>
-
-</body>
-
-
-
-
-
+		<footer>
+			<p>Copyright 2024 <i> GroupProject bottle</i> All Rights Reserved</p>
+		</footer>
+	</body>
 </html>

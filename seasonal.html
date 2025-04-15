@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Seasonal</title>
+		<!--link to css-->
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		/>
+		<link rel="stylesheet" href="css/product.css" />
+		<link rel="stylesheet" href="css/product_fix.css" />
+
+		<!--for cart, plus, minus logo-->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<!--for bootstrapcdn buttons -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="js/Web_part_2.js"></script>
+		<script src="js/product.js"></script>
+		<script src="js/seasonal.js"></script>
+		<script src="js/user.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo"></div>
+			<div class="company-info">
+				<h2>Eco Hydro Bottle</h2>
+			</div>
+
+			<nav class="navbar">
+				<ul>
+					<li><a href="mainpage.html">Main page</a></li>
+					<li><a href="newstyle.html">New style</a></li>
+					<li><a href="hotsale.html">Hot sale</a></li>
+					<li><a href="seasonal.html">Seasonal</a></li>
+				</ul>
+			</nav>
+			<nav class="information">
+				<a class="button" onclick="loadUser()">User<i class="bi bi-person-circle"></i></a>
+				<a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="content3" style="text-align: center">
+				<div class="content3">
+					<!-- slide effect -->
+					<div class="slide-container">
+						<div class="slide active"></div>
+						<!-- first img，defult show -->
+						<div class="slide"></div>
+						<!-- second img-->
+						<div class="slide"></div>
+						<!-- ect -->
+						<div class="slide"></div>
+						<div class="slide"></div>
+
+						<button class="nav-btn prev-btn">&#10094;</button>
+						<button class="nav-btn next-btn">&#10095;</button>
+
+						<div class="dot-container">
+							<span class="dot active"></span>
+							<!--first start-->
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="product">
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65488b5271b1bc0023227a83/800x.webp?source_format=jpg"
+						alt="colab1"
+					/>
+					<h4>SumikkoPondmeeting</h4>
+					<h4>HKD$70</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product11"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product11-->
+				</div>
+
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/654895d51634da0017e3c180/800x.webp?source_format=jpg"
+						alt="colab2"
+					/>
+					<h4>SumikkoTreehouse</h4>
+					<h4>HKD$70</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product12"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product12-->
+				</div>
+
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65487f40fe35de000e464d67/800x.webp?source_format=jpg"
+						alt="colab3"
+					/>
+					<h4>SumikkoNightparty</h4>
+					<h4>HKD$70</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product13"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product13-->
+				</div>
+
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65488c39721397001d8e5603/800x.webp?source_format=jpg"
+						alt="colab4"
+					/>
+					<h4>Sumikkoswim</h4>
+					<h4>HKD$70</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product14"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product14-->
+				</div>
+
+				<div>
+					<img
+						src="https://shoplineimg.com/628ae7fdb8a171003f373d70/654866356b8349000e144fef/800x.webp?source_format=jpg"
+						alt="colab5"
+					/>
+					<h4>Sumikkohike</h4>
+					<h4>HKD$70</h4>
+					<button
+						type="button"
+						class="btn btn-danger"
+						data-toggle="modal"
+						data-target="#product15"
+					>
+						Buy now
+					</button>
+					<!--datatarget for product15-->
+				</div>
+			</section>
+
+			<!-- Modal for product11, id for detect product11 -->
+			<div
+				class="modal fade"
+				id="product11"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle11"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product11">SumikkoPondmeeting</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65488b5271b1bc0023227a83/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$70</p>
+							<p class="ProduceSize">Size: 500mL</p>
+							<p class="ProductColor">Color: Orange</p>
+							<p>Cute Sumikkogurashi have a meeting with you</p>
+
+							<div class="quantity">
+								Quantity:
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal for product12, id for detect product12 -->
+			<div
+				class="modal fade"
+				id="product12"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle12"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product12">SumikkoTreehouse</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/654895d51634da0017e3c180/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$70</p>
+							<p class="ProduceSize">Size: 500mL</p>
+							<p class="ProductColor">Color: Hot Pink</p>
+							<p>
+								Come join and heve fun in the treehouse with Sumikkogurashi!
+							</p>
+
+							<div class="quantity">
+								Quantity:
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal for product13, id for detect product13 -->
+			<div
+				class="modal fade"
+				id="product13"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle13"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product13">SumikkoNightparty</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65487f40fe35de000e464d67/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$70</p>
+							<p class="ProduceSize">Size: 500mL</p>
+							<p class="ProductColor">Color: Purple</p>
+							<p>Come join the night party with Sumikkogurashi!</p>
+
+							<div class="quantity">
+								Quantity:
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal for product14, id for detect product14 -->
+			<div
+				class="modal fade"
+				id="product14"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle14"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product14">Sumikkoswim</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/65488c39721397001d8e5603/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$70</p>
+							<p class="ProduceSize">Size: 500mL</p>
+							<p class="ProductColor">Color: Blue</p>
+							<p>Come swim with Sumikkogurashi!</p>
+
+							<div class="quantity">
+								Quantity:
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal for product15, id for detect product15 -->
+			<div
+				class="modal fade"
+				id="product15"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="exampleModalCenterTitle15"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="product15">Sumikkohike</h3>
+						</div>
+						<div class="modal-body" style="font-size: 20px">
+							<img
+								style="width: 80%; height: 80%"
+								src="https://shoplineimg.com/628ae7fdb8a171003f373d70/654866356b8349000e144fef/800x.webp?source_format=jpg"
+								alt=""
+							/>
+							<p class="ProductPrice">Price: HKD$70</p>
+							<p class="ProduceSize">Size: 500mL</p>
+							<p class="ProductColor">Color: Orange</p>
+							<p>Come and hike with Sumikkogurashi!</p>
+
+							<div class="quantity">
+								Quantity:
+								<button class="plus-btn" type="button" name="button">
+									<i class="fas fa-plus"></i>
+								</button>
+								<input
+									class="ProductQuantity"
+									style="font-size: 23px"
+									type="number"
+									name="name"
+									value="1"
+									max="20"
+									min="0"
+								/>
+								<button class="minus-btn" type="button" name="button">
+									<i class="fas fa-minus"></i>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary"
+								data-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								type="button"
+								class="btn btn-danger"
+								onclick="addItem(this)"
+							>
+								Add to cart
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 5格圖排版 -->
+
+			<section class="partthree">
+				<div class="largerimg-container">
+					<div class="largerimg">
+						<img
+							src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62b15b055e10330030e89a2b/720x.webp?source_format=jpg"
+							alt="best BOTTLE"
+						/>
+						<div class="larimg-content">
+							<h2>buy 1 get 1 free</h2>
+							<p>The best BOTTLE is on sale in our shop</p>
+							<a href="#" class="btn">Learn More</a>
+						</div>
+					</div>
+					<div class="largerimg">
+						<img
+							src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62b1997bab579c0015aa466c/720x.webp?source_format=jpg"
+							alt="classic bottle"
+						/>
+						<div class="larimg-content">
+							<h2>comming season</h2>
+							<p>The best classic bottle is on sale</p>
+							<a href="#" class="btn">Collection</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="small-img-container">
+					<div class="simg-car">
+						<img
+							src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62b19c67150ed6000f5ecf50/720x.webp?source_format=jpg"
+							alt="BOTTLE -50%"
+						/>
+						<div class="simg-content">
+							<h3>SEASONAL SALE</h3>
+							<p>BOTTLE -50% Off</p>
+						</div>
+					</div>
+					<div class="simg-car">
+						<img
+							src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62b168255e27b30027a0f7d9/1296x.webp?source_format=jpg"
+							alt="Colab BOTTLE"
+						/>
+						<div class="simg-content">
+							<h3>NEW BOTTLE COLLECTION</h3>
+							<p>Colab with Sumikkogurashi</p>
+						</div>
+					</div>
+					<div class="simg-car">
+						<img
+							src="https://shoplineimg.com/628ae7fdb8a171003f373d70/62b285a8381acc0018cb7e2f/720x.webp?source_format=jpg"
+							alt="New Trend"
+						/>
+						<div class="simg-content">
+							<h3>2024 TREND</h3>
+							<p>New Trendy bottle</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- contact info -->
+			<div class="contact-info" id="Contact" style="margin-top: 0%">
+				<!--the size is different from newstyle page, so use margin-top to make it fix-->
+				<h2>Contact Information</h2>
+				<p style="font-size: 20px">
+					<i class="fas fa-phone"></i>+852 1234 5678
+					<i class="fas fa-envelope"></i>
+					<a href="mailto:GroupProject@gmail.com">GroupProject@gmail.com</a>
+				</p>
+			</div>
+		</main>
+
+		<footer>
+			<p>Copyright 2024 <i> GroupProject bottle</i> All Right Reserved</p>
+		</footer>
+	</body>
+</html>

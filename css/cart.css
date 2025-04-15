@@ -1,0 +1,177 @@
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f8ff; /* 页面的背景色 */
+}
+header {
+	display: flex; /* 使用 Flexbox 布局 */
+	align-items: center; /* 垂直居中 */
+	justify-content: space-between; /* 左右对齐 */
+	background: #2c3e50; /* 公司名称背景色 */
+	color: #ffffff;
+	padding: 20px 30px; /* 内边距 */
+	animation: expandDown 0.8s ease forwards; /* 应用动画 */
+}
+ul {
+	list-style-type: none; /* 去除默认的列表样式 */
+	padding: 0; /* 去除默认的内边距 */
+	margin: 0; /* 去除默认的外边距 */
+}
+
+li {
+	list-style-type: none; /* 去除默认的列表样式 */
+	padding: 0; /* 去除默认的内边距 */
+	margin: 0; /* 去除默认的外边距 */
+}
+@keyframes expandDown {
+	from {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+.logo {
+	width: 80px; /* 标志宽度 */
+	height: 80px; /* 标志高度 */
+	background: url("https://www.logosc.cn/uploads/output/2021/10/19/81ebfa1e23ac2ca8582edeefdc9016be.jpg")
+		no-repeat center center;
+	background-size: contain;
+}
+.company-info {
+	display: flex;
+	flex-direction: column; /* 垂直排列 */
+	margin-left: 10px; /* 增加一点左边距 */
+	text-align: left; /* 左对齐 */
+}
+header h1 {
+	margin: 0; /* 去掉标题的外边距 */
+	font-size: 2em; /* 字体大小 */
+	color: #ecf0f1;
+}
+header p {
+	margin: 0; /* 去掉段落的外边距 */
+	color: #bdc3c7; /* 字体颜色 */
+}
+.button-group {
+	display: flex; /* 使用 Flexbox 布局 */
+	margin-left: auto; /* 将按钮组推到右侧 */
+}
+.button {
+	display: inline-block;
+	background-color: transparent; /* 按钮背景透明 */
+	color: #ffffff; /* 字体颜色 */
+	padding: 10px 22px; /* 按钮内边距 */
+	border: 2px solid #ffffff; /* 白色边框 */
+	border-radius: 5px; /* 圆角 */
+	text-decoration: none; /* 去掉下划线 */
+	margin: 5px; /* 减小按钮外边距 */
+	transition: background 0.3s, color 0.3s; /* 添加过渡效果 */
+	font-weight: normal; /* 设置按钮字体为正常粗细 */
+}
+.button:hover {
+	background-color: rgba(255, 255, 255, 0.2); /* 悬停时的背景颜色 */
+	color: #ecf0f1; /* 悬停时字体颜色 */
+}
+.container {
+	max-width: 1000px; /* 最大宽度 */
+	padding: 20px; /* 增加上下内边距和左右内边距 */
+	background: #ffffff; /* 白色背景 */
+	border-radius: 10px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+	margin: 20px auto; /* 中心对齐 */
+	text-align: center; /* 文本居中 */
+}
+.cart-item {
+	display: flex; /* 使用 Flexbox 布局 */
+	justify-content: space-between; /* 项目之间的间隔 */
+	align-items: center; /* 垂直居中 */
+	padding: 15px;
+	border-bottom: 1px solid #ddd; /* 项目分隔线 */
+	flex-wrap: wrap; /* 允许换行 */
+}
+.cart-item:last-child {
+	border-bottom: none; /* 最后一个项目不显示分隔线 */
+}
+.item-details {
+	flex: 1; /* 填满可用空间 */
+	margin-right: 10px; /* 右边距 */
+	text-align: left; /* 左对齐 */
+}
+.item-name {
+	font-size: 1.2em; /* 商品名称字体大小 */
+	color: #333; /* 商品名称颜色 */
+}
+.item-price {
+	color: #e74c3c; /* 商品价格颜色 */
+}
+.remove-button {
+	background-color: #e74c3c; /* 移除按钮背景颜色 */
+	color: #ffffff; /* 字体颜色 */
+	padding: 8px 16px; /* 按钮内边距 */
+	border: none; /* 去掉边框 */
+	border-radius: 5px; /* 圆角 */
+	cursor: pointer; /* 鼠标指针样式 */
+	transition: background 0.3s; /* 添加过渡效果 */
+	flex-shrink: 0; /* 防止按钮缩小 */
+}
+.remove-button:hover {
+	background-color: #c0392b; /* 悬停时的背景颜色 */
+}
+.total {
+	font-size: 1.5em; /* 总金额字体大小 */
+	text-align: right; /* 右对齐 */
+	margin-top: 20px; /* 顶部间距 */
+}
+
+.checkout-button {
+	display: inline-block;
+	background-color: #2ecc71; /* 结算按钮背景颜色 */
+	color: #ffffff; /* 字体颜色 */
+	padding: 12px 24px; /* 按钮内边距 */
+	border: none; /* 去掉边框 */
+	border-radius: 5px; /* 圆角 */
+	text-decoration: none; /* 去掉下划线 */
+	margin-top: 20px; /* 上边距 */
+	transition: background 0.3s; /* 添加过渡效果 */
+}
+.clear-button {
+	display: inline-block;
+	color: #ffffff; /* 字体颜色 */
+	padding: 12px 24px; /* 按钮内边距 */
+	border: none; /* 去掉边框 */
+	border-radius: 5px; /* 圆角 */
+	text-decoration: none; /* 去掉下划线 */
+	margin-top: 20px; /* 上边距 */
+	transition: background 0.3s; /* 添加过渡效果 */
+	background-color: rgb(114, 114, 255);
+}
+.clear-button:hover {
+	background-color: #5047ff; /* 悬停时的背景颜色 */
+}
+.checkout-button:hover {
+	background-color: #27ae60; /* 悬停时的背景颜色 */
+}
+
+@media (max-width: 480px) {
+	header h1 {
+		font-size: 1.5em; /* 调整小屏幕字体大小 */
+	}
+	.logo {
+		width: 50px; /* 调整小屏幕标志大小 */
+		height: 50px;
+	}
+	.cart-item {
+		flex-direction: column; /* 在小屏幕上垂直排列 */
+		align-items: flex-start; /* 左对齐 */
+	}
+	.item-details {
+		margin-right: 0; /* 去掉右边距 */
+	}
+	.remove-button {
+		margin-top: 10px; /* 添加顶部间距 */
+	}
+}

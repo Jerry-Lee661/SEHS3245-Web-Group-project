@@ -1,0 +1,24 @@
+.modal-body {
+    
+	height: 50%;
+}
+
+.modal-body-content {
+	font-size: 20px;
+}
+.modal-body-img {
+	width: 400px;
+	height: 400px;
+}
+
+/* Remove default styles for type="number" input */
+input[type="number"] {
+	-moz-appearance: textfield; /* Firefox */
+	appearance: textfield; /* Other browsers */
+}
+/* 24048352S LI ZIYI*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none; /* Chrome, Safari, Edge */
+	margin: 0;
+}

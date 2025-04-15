@@ -1,0 +1,23 @@
+What have I done:
+1，分析網頁結構，使用流程
+2，前後端邏輯：JS-PHP
+
+
+To do:
+1，cart-html onload事件:sync the cart with server side，補充LocalStorage的不足。
+2，本地/伺服器端PHP做輸入驗證，防止SQL注入。
+3，細化database插入内容。
+
+
+Q&A：
+1，What frameworks？
+A：I reviewed the code i think BS & jQuery was used.
+
+2，Why LocalStorage? What is the difference？（not PHP session？）
+Server is expensive.
+In fact, PHP session is using cookies. 
+It's hard to say it won't violate the requirement (no cookies).
+
+3, Database
+A table with the products data are prepared. 
+However, there is no enough time to change everything to a PHP one.
