@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receipt</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    h2 {
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ccc;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <!-- 公司图标 -->
+        <div class="company-info">
+            <h1>Company Name</h1>
+            <p>Your shopping cart</p>
+            <!-- 购物车提示 -->
+        </div>
+        <div class="button-group">
+            <a href="mainpage.html" class="button">Main page</a>
+            <!-- 主页 -->
+            <a href="newstyle.html" class="button">Newstyle</a>
+            <!-- 新款页面 -->
+            <a href="hotsale.html" class="button">Hot sale</a>
+            <!-- 热卖页面 -->
+            <a href="seasonal.html" class="button">Seasonal</a>
+            <!-- 季节性商品页面 -->
+            <a class="button" onclick="loadUser()">User<i class="bi bi-person-circle"></i></a>
+            <!-- 用户按钮 -->
+        </div>
+    </header>
+
+
+<!--<div class="container">
+    <h2>Receipt</h2>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+        <?php
+        $products = $_POST['products'];
+        $total = 0;
+        foreach ($products as $product) {
+            echo "<tr>";
+            echo "<td>{$product['name']}</td>";
+            echo "<td>{$product['price']}</td>";
+            echo "</tr>";
+            $total += $product['price'];
+        }
+        ?>
+        <tr>
+            <th>Total</th>
+            <td><?php echo $total; ?></td>
+        </tr>
+    </table>
+    <p>Thank you for shopping with us!</p>
+</div>-->
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const receiptElement = document.getElementById("receipt");
+            const orderReceipt = localStorage.getItem("orderReceipt");
+
+            if (orderReceipt) {
+                const data = JSON.parse(orderReceipt);
+                receiptElement.innerHTML = `
+                    <h2>Order Status: ${data.status}</h2>
+                    <p>Message: ${data.message}</p>
+                    <h3>Cart:</h3>
+                    <pre>${JSON.stringify(data.cart, null, 2)}</pre>
+                    <h3>User Token:</h3>
+                    <p>${data.userToken}</p>
+                `;
+            } else {
+                receiptElement.textContent = "No order receipt found.";
+            }
+        });
+    </script>
+</body>
+</html>

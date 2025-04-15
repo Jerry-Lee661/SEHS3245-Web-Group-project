@@ -1,2 +1,0 @@
-1, cart-html onload事件:sync the cart with server side
-2, SQL注入防护，本地/php做验证

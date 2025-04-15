@@ -5,9 +5,9 @@ $(document).on('click', '.minus-btn', function(e) { //$(document) is for the JS 
     var value = parseInt($input.val()); //將目前輸入的數值變成整數
 
     if (value > 1) {
-        value = value - 1; //如果大過1 當前數值減1 e.g 2 - 1 = 1
+        value = value - 1; //如果大過1 當前數值減1 e.g 3 - 1 = 2
     } else {
-        value = 0; //否則就會顯示0, e.g 1 - 1 = 0
+        value = 1; //否則就會顯示1
     }
 
     $input.val(value); //Set the new value back to the input (update input)

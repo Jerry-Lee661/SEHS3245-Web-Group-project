@@ -1,0 +1,35 @@
+CREATE DATABASE ShoppingSite;
+--创建购物车数据库
+USE Cart;
+CREATE TABLE UserData (
+  --创建用户表
+  UserID INT AUTO_INCREMENT PRIMARY KEY,
+  --用户ID，主键，自动增加
+  Username VARCHAR(255) NOT NULL,
+  Password VARCHAR(255) NOT NULL,
+  Email VARCHAR(255) NOT NULL UNIQUE
+);
+CREATE TABLE ProductData (
+  --商品表
+  ProductID INT AUTO_INCREMENT PRIMARY KEY,
+  --商品ID，主键，自动增加
+  ProductName VARCHAR(255) NOT NULL,
+  Price DECIMAL(10, 2) NOT NULL,
+  --价格，十进制，精确到分
+  Description TEXT,
+  Quantity INT NOT NULL
+);
+CREATE TABLE Cart (
+  --购物车表
+  CartID INT AUTO_INCREMENT PRIMARY KEY,
+  UserID INT,
+  FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
+CREATE TABLE Order (
+  --订单表
+  OrderID INT AUTO_INCREMENT PRIMARY KEY,
+  UserID INT,
+  OrderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+  TotalPrice DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
